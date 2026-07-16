@@ -1,0 +1,409 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html,body{
+
+width:100%;
+height:100%;
+overflow:hidden;
+background:#000;
+font-family:'Cinzel',serif;
+color:#D4AF37;
+
+}
+
+/* GİRİŞ */
+
+#login{
+
+position:fixed;
+left:0;
+top:0;
+width:100%;
+height:100vh;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+background:#000;
+
+z-index:999;
+
+}
+
+#login h1{
+
+font-size:58px;
+
+letter-spacing:10px;
+
+text-shadow:
+
+0 0 10px gold,
+0 0 30px gold,
+0 0 60px gold;
+
+}
+
+#login h2{
+
+margin-top:10px;
+
+font-size:22px;
+
+letter-spacing:8px;
+
+font-weight:300;
+
+}
+
+#password{
+
+margin-top:50px;
+
+width:340px;
+
+padding:16px;
+
+background:#080808;
+
+border:2px solid #D4AF37;
+
+color:#D4AF37;
+
+font-size:20px;
+
+text-align:center;
+
+outline:none;
+
+}
+
+#password:focus{
+
+box-shadow:0 0 30px gold;
+
+}
+
+button{
+
+margin-top:25px;
+
+padding:14px 60px;
+
+background:black;
+
+border:2px solid gold;
+
+color:gold;
+
+cursor:pointer;
+
+font-size:18px;
+
+transition:.4s;
+
+}
+
+button:hover{
+
+background:#D4AF37;
+
+color:black;
+
+box-shadow:0 0 25px gold;
+
+}
+
+/* ANA SAYFA */
+
+#main{
+
+display:none;
+
+width:100%;
+
+height:100vh;
+
+position:relative;
+
+background:black;
+
+overflow:hidden;
+
+}
+
+/* BAŞLIK */
+
+#title{
+
+position:absolute;
+
+top:25px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+text-align:center;
+
+font-size:24px;
+
+letter-spacing:6px;
+
+text-shadow:
+
+0 0 10px gold,
+0 0 30px gold;
+
+}
+
+/* ALT YAZI */
+
+#bottom{
+
+position:absolute;
+
+bottom:30px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+text-align:center;
+
+font-size:18px;
+
+letter-spacing:5px;
+
+text-shadow:
+
+0 0 10px gold;
+
+}
+
+/* AĞ */
+
+#web{
+
+position:absolute;
+
+left:50%;
+
+top:50%;
+
+transform:translate(-50%,-50%);
+
+width:900px;
+
+height:900px;
+
+}
+
+/* YILDIZ */
+
+.star{
+
+position:absolute;
+
+font-size:22px;
+
+color:#FFD700;
+
+text-shadow:
+
+0 0 10px gold,
+0 0 20px gold,
+0 0 40px gold;
+
+animation:blink 2s infinite;
+
+}
+
+@keyframes blink{
+
+0%{opacity:.5;}
+50%{opacity:1;}
+100%{opacity:.5;}
+
+}
+
+/* İSİMLER */
+
+.name{
+
+position:absolute;
+
+font-size:15px;
+
+color:#FFD700;
+
+letter-spacing:2px;
+
+text-shadow:
+
+0 0 10px gold;
+
+}
+/* ========================= */
+/* ÖRÜMCEK AĞI ÇİZGİLERİ */
+/* ========================= */
+
+#web::before{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+top:50%;
+
+transform:translate(-50%,-50%);
+
+width:650px;
+height:650px;
+
+border:2px solid rgba(212,175,55,.9);
+border-radius:50%;
+
+box-shadow:
+0 0 15px gold,
+0 0 30px rgba(255,215,0,.5);
+
+}
+
+#web::after{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+top:50%;
+
+transform:translate(-50%,-50%);
+
+width:470px;
+height:470px;
+
+border:2px solid rgba(212,175,55,.8);
+border-radius:50%;
+
+box-shadow:
+0 0 12px gold;
+
+}
+
+/* HALKALAR */
+
+.ring{
+
+position:absolute;
+
+left:50%;
+top:50%;
+
+transform:translate(-50%,-50%);
+
+border:2px solid rgba(212,175,55,.65);
+
+border-radius:50%;
+
+}
+
+.r1{
+
+width:220px;
+height:220px;
+
+}
+
+.r2{
+
+width:340px;
+height:340px;
+
+}
+
+.r3{
+
+width:520px;
+height:520px;
+
+}
+
+.r4{
+
+width:760px;
+height:760px;
+
+}
+
+/* RADYAL İPLER */
+
+.line{
+
+position:absolute;
+
+left:50%;
+top:50%;
+
+width:2px;
+height:380px;
+
+background:#D4AF37;
+
+transform-origin:top center;
+
+box-shadow:
+
+0 0 8px gold,
+0 0 18px gold;
+
+}
+
+.l1{transform:rotate(0deg);}
+.l2{transform:rotate(30deg);}
+.l3{transform:rotate(60deg);}
+.l4{transform:rotate(90deg);}
+.l5{transform:rotate(120deg);}
+.l6{transform:rotate(150deg);}
+.l7{transform:rotate(180deg);}
+.l8{transform:rotate(210deg);}
+.l9{transform:rotate(240deg);}
+.l10{transform:rotate(270deg);}
+.l11{transform:rotate(300deg);}
+.l12{transform:rotate(330deg);}
+
+/* YILDIZLAR */
+
+.s1{left:50%;top:6%;}
+.s2{left:74%;top:18%;}
+.s3{left:90%;top:38%;}
+.s4{left:90%;top:62%;}
+.s5{left:74%;top:82%;}
+.s6{left:50%;top:94%;}
+.s7{left:26%;top:82%;}
+.s8{left:10%;top:62%;}
+.s9{left:10%;top:38%;}
+.s10{left:26%;top:18%;}
+.s11{left:50%;top:50%;}
+.s12{left:34%;top:34%;}
+.s13{left:66%;top:34%;}
+
+/* İSİMLER */
+
+.n1{left:52%;top:0%;}
+.n2{left:82%;top:14%;}
+.n3{left:98%;top:38%;}
+.n4{left:98%;top:64%;}
+.n5{left:82%;top:86%;}
+.n6{left:52%;top:98%;}
+.n7{left:0%;top:64%;}
+.n8{left:0%;top:38%;}
+.n9{left:16%;top:14%;}
